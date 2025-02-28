@@ -47,7 +47,9 @@ Table: testdata
 - Show proficiency in Python: By showing good practices in the structure and documentation, usage of several programming paradigms (e.g. imperative, OOP, functional), etc.
 
 **Solution Explanation**
+
 *Etl_Dags.py*
+
 This script defines an Apache Airflow Directed Acyclic Graph (DAG) named flight_status_etl that performs an Extract, Transform, Load (ETL) process for flight data. The DAG consists of two primary tasks: extracting flight data from the AviationStack API and loading it into a PostgreSQL database.
 
 - Prerequisites 
@@ -67,10 +69,13 @@ extract_data Task: Fetches active flight data from the AviationStack API and sav
  load_data Task: Reads the CSV file and loads the data into a PostgreSQL table named testdata.
 
 *init.sql*
+
 This sql script creates the testfligoo Database and the testdata table.
 
 *query.ipynb*
+
 Script jupyter notebook that consumes data of the testfligoo database. 
 
 *docker-compose.yaml*
-The docker-compose.yml file defines the services required to run PostgreSQL and Airflow. It specifies the configuration for each service, including environment variables, ports, and dependencies, enabling the orchestration of these services in a containerized environment. This setup facilitates the deployment and management of Airflow workflows with a PostgreSQL backend.
+
+The docker-compose.yaml file defines the services required to run PostgreSQL and Airflow. It specifies the configuration for each service, including environment variables, ports, and dependencies, enabling the orchestration of these services in a containerized environment. This setup facilitates the deployment and management of Airflow workflows with a PostgreSQL backend.
